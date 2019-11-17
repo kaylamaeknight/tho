@@ -1,0 +1,862 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/yeti/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/css/bootstrap-multiselect.css">
+    <link rel="stylesheet" href="css/output.css">
+
+    <title>Report Builder</title>
+    <script src="https://kit.fontawesome.com/62be153382.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+    <div class="container py-5">
+      <div class="row">
+        <div class="hidden-xs col-md-3">
+
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Basic</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="builder.html">Builder</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="architect.html"><strong>Architect</strong></a>
+            </li>
+          </ul>
+
+        </div>
+        <div class="col-12 col-md-8 ml-auto">
+          <h1>Report Builder</h1>
+          <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut fermentum urna. Vestibulum condimentum quis est ut bibendum. Proin orci purus, congue ut lorem et, tincidunt scelerisque augue. In convallis semper leo.</p>
+
+          <ul class="nav nav-tabs justify-content-end" id="reports" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="assigned-tab" data-toggle="tab" href="#assigned" role="tab" aria-controls="assigned" aria-selected="true">Assigned Reports</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="custom-tab" data-toggle="tab" href="#custom" role="tab" aria-controls="custom" aria-selected="false">Custom Reports</a>
+            </li>
+          </ul>
+          <div class="tab-content py-4" id="myTabContent">
+            <div class="tab-pane show active" id="assigned" role="tabpanel" aria-labelledby="assigned-tab">
+
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-5">
+                  <li class="breadcrumb-item"><a href="architect.html">Assigned Reports</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">New Report</li>
+                </ol>
+              </nav>
+
+              <h2>New Report</h2>
+              <p>Phasellus a molestie lectus. Aliquam erat volutpat. Nulla porta sit amet libero id tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis quam eget velit placerat tincidunt. Ut ut tortor.</p>
+              <p class="mb-5"><a href="#">Download Full Instructions</a></p>
+
+              <div id="accordion" class="accordion">
+                <div class="card">
+                  <div class="card-header collapsed" id="headingSelectionCriteria" data-toggle="collapse" data-target="#collapseSelectionCriteria" aria-expanded="true" aria-controls="collapseSelectionCriteria">
+                    <h3>
+                      <span>1. Selection Criteria</span>
+                      <i class="fas fa-times ml-auto fa-md fa-fw"></i>
+                    </h3>
+                  </div>
+                  <div id="collapseSelectionCriteria" class="collapse" aria-labelledby="headingSelectionCriteria" data-parent="#accordion">
+                    <div class="card-body">
+
+                      <div class="row addRow-row">
+                        <div class="col-12 col-md-6">
+                          <div class="form-group mb-2">
+                            <select class="form-control" id="category">
+                              <option value="" disabled selected>Category</option>
+                              <option>Household</option>
+                              <option>Member</option>
+                              <option>Payment</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <div class="form-group mb-1">
+                            <select class="custom-select" id="basic" multiple="multiple">
+                              <option value="value1">Child Plus family ID</option>
+                              <option value="value2">Date household created</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+
+                      <a class="addRow-button d-block mb-4"><i class="fas fa-plus"></i> Add Row</a>
+
+                      <table class="table table-hover table-bordered">
+                        <thead>
+                          <tr>
+                            <th class="fit" scope="col">Criteria</th>
+                            <th scope="col">Values</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="fit"><a href="#">Child Plus family ID</a></td>
+                            <td><a href="#" data-toggle="modal" data-target="#setValuesSelect"><em><u>Set Values</u></em></a></td>
+                          </tr>
+                          <tr>
+                            <td class="fit"><a href="#">Date household created</a></td>
+                            <td><a href="#" data-toggle="modal" data-target="#setValuesForm"><em><u>Set Values</u></em></a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <a href="#" class="btn btn-primary" data-toggle="collapse" data-target="#collapseSecondaryCriteria" aria-expanded="true" aria-controls="collapseSecondaryCriteria">Next</a>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header collapsed" id="headingSecondaryCriteria" id="headingSecondaryCriteria" data-toggle="collapse" data-target="#collapseSecondaryCriteria" aria-expanded="true" aria-controls="collapseSecondaryCriteria">
+                    <h3>
+                      <span>2. Secondary Criteria</span>
+                      <i class="fas fa-times ml-auto fa-md fa-fw"></i>
+                    </h3>
+                  </div>
+
+                  <div id="collapseSecondaryCriteria" class="collapse" aria-labelledby="headingSecondaryCriteria" data-parent="#accordion">
+                    <div class="card-body">
+
+                      <div class="row">
+                        <div class="col-12 col-md-6">
+                          <div class="form-group mb-2">
+                            <select class="form-control" id="category">
+                              <option value="" disabled selected>Category</option>
+                              <option>Household</option>
+                              <option>Member</option>
+                              <option>Payment</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <div class="form-group mb-1">
+                            <select class="custom-select" id="basic" multiple="multiple">
+                              <option value="value1">Child Plus family ID</option>
+                              <option value="value2">Date household created</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+
+                      <p class="mb-4"><a href="#"><i class="fas fa-plus"></i> Add Row</a></p>
+
+                      <table class="table table-hover table-bordered">
+                        <thead>
+                          <tr>
+                            <th class="fit" scope="col">Criteria</th>
+                            <th scope="col">Values</th>
+                            <th scope="col"><span class="sr-only">Edit or Delete</span></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="fit"><a href="#">Child Plus family ID</a></td>
+                            <td>
+                              <ul class="list-unstyled m-0">
+                                <li>No value entered</li>
+                                <li>2</li>
+                              </ul>
+                            </td>
+                            <td class="fit"><a href="#"><i class="fas fa-edit fa-fw "></i></a><a href="#"><i class="ml-2 fa-fw  fas fa-trash-alt"></i></a></td>
+                          </tr>
+                          <tr>
+                            <td class="fit"><a href="#">Date household created</a></td>
+                            <td>
+                              <ul class="list-unstyled m-0">
+                                <li>Value entered</li>
+                                <li>Between 2 and 3</li>
+                                <li>Equals 0</li>
+                                <li>Last 7 days</li>
+                              </ul>
+                            </td>
+                            <td class="fit"><a href="#"><i class="fas fa-edit fa-fw "></i></a><a href="#"><i class="ml-2 fa-fw  fas fa-trash-alt"></i></a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <a href="#" class="btn btn-primary" data-toggle="collapse" data-target="#collapseReportType" aria-expanded="true" aria-controls="collapseReportType">Next</a>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header collapsed" id="headingReportType"  id="headingReportType" id="headingReportType" data-toggle="collapse" data-target="#collapseReportType" aria-expanded="true" aria-controls="collapseReportType">
+                    <h3>
+                      <span>3. Report Type</span>
+                      <i class="fas fa-times ml-auto fa-md fa-fw"></i>
+                    </h3>
+                  </div>
+
+                  <div id="collapseReportType" class="collapse" aria-labelledby="headingReportType" data-parent="#accordion">
+                    <div class="card-body">
+
+                      <div class="form-group">
+                        <label for="exportType">Choose an Export Type</label>
+                        <ul class="nav nav-pills" id="exportType" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active" id="standardReporting-tab" data-toggle="tab" href="#standardReporting" role="tab" aria-controls="standardReporting" aria-selected="true">Standard Reporting</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="laserReporting-tab" data-toggle="tab" href="#laserReporting" role="tab" aria-controls="laserReporting" aria-selected="false">LASER Excel</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="customExcel-tab" data-toggle="tab" href="#customExcel" role="tab" aria-controls="customExcel" aria-selected="false">Custom Excel</a>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <hr />
+
+                      <div class="tab-content" id="exportTypeContent">
+                        <div class="tab-pane show active" id="standardReporting" role="tabpanel" aria-labelledby="standardReporting-tab">
+
+                          <div class="row">
+                            <div class="col-12 col-md-6">
+                              <div class="form-group">
+                                <label>Household</label>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                  <label class="form-check-label" for="exampleRadios1">
+                                    Default radio
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                  <label class="form-check-label" for="exampleRadios2">
+                                    Second default radio
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+                                  <label class="form-check-label" for="exampleRadios3">
+                                    Third default radio
+                                  </label>
+                                </div>
+                              </div>
+
+                              <div class="form-group">
+                                <label>Payment</label>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4" checked>
+                                  <label class="form-check-label" for="exampleRadios4">
+                                    Default radio
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option5">
+                                  <label class="form-check-label" for="exampleRadios5">
+                                    Second default radio
+                                  </label>
+                                </div>
+                                <div class="form-check disabled">
+                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios6" value="option6">
+                                  <label class="form-check-label" for="exampleRadios6">
+                                    Third default radio
+                                  </label>
+                                </div>
+                              </div>
+
+                              <div class="form-group">
+                                <label>Outcome</label>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios7" value="option7" checked>
+                                  <label class="form-check-label" for="exampleRadios7">
+                                    Default radio
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios8" value="option8">
+                                  <label class="form-check-label" for="exampleRadios8">
+                                    Second default radio
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios9" value="option9">
+                                  <label class="form-check-label" for="exampleRadios9">
+                                    Third default radio
+                                  </label>
+                                </div>
+                              </div>
+
+                              <div class="form-group mb-0">
+                                <label>Member</label>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios10" value="option10" checked>
+                                  <label class="form-check-label" for="exampleRadios10">
+                                    Default radio
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios11" value="option11">
+                                  <label class="form-check-label" for="exampleRadios11">
+                                    Second default radio
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios12" value="option12">
+                                  <label class="form-check-label" for="exampleRadios12">
+                                    Third default radio
+                                  </label>
+                                </div>
+                              </div>
+
+                            </div>
+                            <div class="col-12 col-md-6">
+
+                              <div class="form-group">
+                                <label>Program</label>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios13" value="option13" checked>
+                                  <label class="form-check-label" for="exampleRadios13">
+                                    Default radio
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios14" value="option14">
+                                  <label class="form-check-label" for="exampleRadios14">
+                                    Second default radio
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios15" value="option15">
+                                  <label class="form-check-label" for="exampleRadios15">
+                                    Third default radio
+                                  </label>
+                                </div>
+                              </div>
+
+                              <div class="form-group">
+                                <label>LIHEAP Payment</label>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios16" value="option16" checked>
+                                  <label class="form-check-label" for="exampleRadios16">
+                                    Default radio
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios17" value="option17">
+                                  <label class="form-check-label" for="exampleRadios17">
+                                    Second default radio
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios18" value="option18">
+                                  <label class="form-check-label" for="exampleRadios18">
+                                    Third default radio
+                                  </label>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+
+
+                        </div>
+                        <div class="tab-pane" id="laserReporting" role="tabpanel" aria-labelledby="laserReporting-tab">
+                          <label>Select Field(s)</label>
+                          <p>You may choose the fields and see a live preview of data with the LASER Excel builder tool. The following button will launch the builder tool in a fullscreen modal.</p>
+
+                          <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#laserExcelBuilder">Open Laser Excel Builder</a>
+                        </div>
+                        <div class="tab-pane" id="customExcel" role="tabpanel" aria-labelledby="customExcel-tab">
+
+                          <div class="row mb-4 align-items-center">
+                            <div class="col-12 col-md-4">
+                              <label class="m-0">Select Field(s)</label>
+                            </div>
+
+                            <div class="col-12 col-md-8 d-flex">
+                              <input type="search" class="form-control ml-auto" id="search" placeholder="Search Fields">
+
+                              <select id="comparison" class="form-control ml-3">
+                                <option selected disabled>Category</option>
+                                <option>Household</option>
+                                <option>Member</option>
+                                <option>Payment</option>
+                              </select>
+
+                              <select id="comparison" class="form-control ml-3">
+                                <option selected disabled>Grouping</option>
+                                <option>Household Status</option>
+                                <option>Head of Household</option>
+                                <option>Household Size</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <table class="table table-hover table-bordered">
+                            <thead>
+                              <tr>
+                                <th class="fit" scope="col">Field Name</th>
+                                <th scope="col">Field Category</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="fit">
+                                  <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customExcel1">
+                                    <label class="custom-control-label" for="customExcel1">Household Status</label>
+                                  </div>
+                                </td>
+                                <td>Household</td>
+                              </tr>
+                              <tr>
+                                <td class="fit">
+                                  <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customExcel2">
+                                    <label class="custom-control-label" for="customExcel2">Head Of Household</label>
+                                  </div>
+                                </td>
+                                <td>Household</td>
+                              </tr>
+                              <tr>
+                                <td class="fit">
+                                  <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customExcel3">
+                                    <label class="custom-control-label" for="customExcel3">Household Size</label>
+                                  </div>
+                                </td>
+                                <td>Household</td>
+                              </tr>
+                              <tr>
+                                <td class="fit">
+                                  <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customExcel4">
+                                    <label class="custom-control-label" for="customExcel4">Initial Contact Date</label>
+                                  </div>
+                                </td>
+                                <td>Household</td>
+                              </tr>
+                              <tr>
+                                <td class="fit">
+                                  <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customExcel5">
+                                    <label class="custom-control-label" for="customExcel5">Household Status</label>
+                                  </div>
+                                </td>
+                                <td>Member</td>
+                              </tr>
+                              <tr>
+                                <td class="fit">
+                                  <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customExcel6">
+                                    <label class="custom-control-label" for="customExcel6">Head Of Household</label>
+                                  </div>
+                                </td>
+                                <td>Member</td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                        </div>
+                      </div>
+
+                      <hr />
+
+                      <div class="form-group">
+                        <label for="whoInclude">Who would you like to include in the report?</label>
+                        <div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="whoInclude1" value="option1">
+                            <label class="form-check-label" for="whoInclude1">Head of household only</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="whoInclude2" value="option2">
+                            <label class="form-check-label" for="whoInclude2">All household members</label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="whoCriteria">Who is required to meet the criteria?</label>
+                        <div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="whoCriteria1" value="option1">
+                            <label class="form-check-label" for="whoCriteria1">All members</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="whoCriteria2" value="option2">
+                            <label class="form-check-label" for="whoCriteria2">At least one member</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="whoCriteria3" value="option2">
+                            <label class="form-check-label" for="whoCriteria3">Head of household</label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <a href="#" class="btn btn-primary" data-toggle="collapse" data-target="#collapseReportDetails" aria-expanded="true" aria-controls="collapseReportDetails">Next</a>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header collapsed" id="headingReportDetails"  id="headingReportDetails" id="headingReportDetails" data-toggle="collapse" data-target="#collapseReportDetails" aria-expanded="true" aria-controls="collapseReportDetails">
+                    <h3>
+                      <span>4. Report Details</span>
+                      <i class="fas fa-times ml-auto fa-md fa-fw"></i>
+                    </h3>
+                  </div>
+
+                  <div id="collapseReportDetails" class="collapse" aria-labelledby="headingReportDetails" data-parent="#accordion">
+                    <div class="card-body">
+
+                      <div class="form-group">
+                        <label for="reportTitle" id="reportTitleLabel">Report Title</label>
+                        <input type="text" class="form-control col-md-6" id="reportTitle" aria-describedby="reportTitleLabel">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="reportDescription" id="reportDescriptionLabel">Report Title</label>
+                        <textarea class="form-control" id="reportDescription" aria-describedby="reportDescriptionLabel"></textarea>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="userTypes">What user Type(s) Can use this report?</label>
+                        <div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="userTypes" id="userTypes1" value="option1">
+                            <label class="form-check-label" for="userTypes1">Basic</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="userTypes" id="userTypes2" value="option2">
+                            <label class="form-check-label" for="userType2">Builder</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="userTypes" id="userTypes3" value="option2">
+                            <label class="form-check-label" for="userType3">Architect</label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <a href="#" class="btn btn-primary" data-toggle="collapse" data-target="#collapseSaveAndDownload" aria-expanded="true" aria-controls="collapseSaveAndDownload">Next</a>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header collapsed" id="headingSaveAndDownload"  id="headingSaveAndDownload" id="headingSaveAndDownload" data-toggle="collapse" data-target="#collapseSaveAndDownload" aria-expanded="true" aria-controls="collapseSaveAndDownload">
+                    <h3>
+                      <span>5. Save &amp; Download</span>
+                      <i class="fas fa-times ml-auto fa-md fa-fw"></i>
+                    </h3>
+                  </div>
+
+                  <div id="collapseSaveAndDownload" class="collapse" aria-labelledby="headingSaveAndDownload" data-parent="#accordion">
+                    <div class="card-body">
+                      <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut fermentum urna. Vestibulum condimentum quis est ut bibendum. Proin orci purus, congue ut lorem et, tincidunt scelerisque augue. In convallis semper leo.</p>
+
+                      <div class="d-flex">
+                        <a href="#" class="btn btn-primary mr-3">Save</a>
+                        <a href="#" class="btn btn-secondary mr-3">Download</a>
+                        <a href="#" class="btn btn-secondary">Map</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="tab-pane" id="custom" role="tabpanel" aria-labelledby="custom-tab">
+
+              <h2>Custom Reports</h2>
+              <p class="mb-5">The following table includes all of your custom reports. You can download the report, generate a map, or edit the selection criteria.</p>
+
+              <table class="table table-hover table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">Report Title</th>
+                    <th scope="col"><span class="sr-only">Download</span></th>
+                    <th scope="col"><span class="sr-only">Map</span></th>
+                    <th scope="col"><span class="sr-only">Edit</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><i class="fas fa-file-pdf fa-fw mr-2"></i> Household Report</td>
+                    <td><a href="#"><i class="fas fa-file-download fa-fw mr-2"></i> Download</a></td>
+                    <td><a href="#"><i class="fas fa-globe-americas fa-fw mr-2"></i> Map</a></td>
+                    <td><a href="architect-edit.html"><i class="fas fa-edit fa-fw mr-2"></i> Edit</a></td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-file-excel fa-fw mr-2"></i> 4144 mail labels (household)</td>
+                    <td><a href="#"><i class="fas fa-file-download fa-fw mr-2"></i> Download</a></td>
+                    <td><a href="#"><i class="fas fa-globe-americas fa-fw mr-2"></i> Map</a></td>
+                    <td><a href="architect-edit.html"><i class="fas fa-edit fa-fw mr-2"></i> Edit</a></td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-file-pdf fa-fw mr-2"></i> Head Start Recruitment</td>
+                    <td><a href="#"><i class="fas fa-file-download fa-fw mr-2"></i> Download</a></td>
+                    <td><a href="#"><i class="fas fa-globe-americas fa-fw mr-2"></i> Map</a></td>
+                    <td><a href="architect-edit.html"><i class="fas fa-edit fa-fw mr-2"></i> Edit</a></td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-file-pdf fa-fw mr-2"></i> Chore Program</td>
+                    <td><a href="#"><i class="fas fa-file-download fa-fw mr-2"></i> Download</a></td>
+                    <td><a href="#"><i class="fas fa-globe-americas fa-fw mr-2"></i> Map</a></td>
+                    <td><a href="architect-edit.html"><i class="fas fa-edit fa-fw mr-2"></i> Edit</a></td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal - Set Values -->
+    <div class="modal" id="setValuesSelect" tabindex="-1" role="dialog" aria-labelledby="setValuesSelectLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="setValuesSelectLabel">Entering values for: <em>Child Plus family ID</em></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul class="list-unstyled m-0">
+              <li>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1">
+                  <label class="custom-control-label" for="customCheck1">Value entered</label>
+                </div>
+              </li>
+              <li>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1">
+                  <label class="custom-control-label" for="customCheck1">No value entered</label>
+                </div>
+              </li>
+              <li>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1">
+                  <label class="custom-control-label" for="customCheck1">2</label>
+                </div>
+              </li>
+              <li>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1">
+                  <label class="custom-control-label" for="customCheck1">3</label>
+                </div>
+              </li>
+              <li>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1">
+                  <label class="custom-control-label" for="customCheck1">4</label>
+                </div>
+              </li>
+              <li>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1">
+                  <label class="custom-control-label" for="customCheck1">5</label>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal - Set Form -->
+    <div class="modal" id="setValuesForm" tabindex="-1" role="dialog" aria-labelledby="setValuesFormLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="setValuesFormLabel">Entering values for: <em>Date household created</em></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Value Entered</label>
+              <div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                  <label class="form-check-label" for="inlineRadio1">Value entered</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                  <label class="form-check-label" for="inlineRadio2">No value entered</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="comparison">Comparison</label>
+              <div class="d-flex mb-2">
+                <select id="comparison" class="form-control mr-3">
+                  <option selected disabled>Operator</option>
+                  <option>Greater than</option>
+                  <option>Less than</option>
+                  <option>Between</option>
+                </select>
+                <input type="text" class="form-control" id="operatorValue" aria-describedby="operatorValue" placeholder="Value">
+              </div>
+              <a href="#"><i class="fas fa-plus"></i> Add Row</a>
+            </div>
+
+            <div class="form-group">
+              <label for="previousNumberOfDays">Previous number of days</label>
+              <input type="number" class="form-control col-3 col-md-2" id="previousNumberOfDays" aria-describedby="operatorValue">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal - Laser Excel -->
+    <div class="modal modal-fullscreen" id="laserExcelBuilder" tabindex="-1" role="dialog" aria-labelledby="laserExcelBuilderLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="laserExcelBuilderLabel">LASER Excel Builder</em></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+            <div class="row">
+              <div class="col-12 col-md-3">
+
+                <div class="form-group">
+                  <label for="reportType">Report Type</label>
+                  <select class="form-control" id="reportType">
+                    <option selected>Household</option>
+                    <option>Member</option>
+                    <option>Payment</option>
+                  </select>
+                </div>
+
+              </div>
+              <div class="col-12 col-md-9">
+
+                <div class="d-flex align-items-center mb-4">
+                  <h2 class="m-0">Excel Preview</h2>
+                  <input type="search" class="form-control ml-auto w-25" id="search" placeholder="Search Fields">
+
+                  <select id="comparison" class="form-control w-25 ml-3">
+                    <option selected disabled>Category</option>
+                    <option>Household</option>
+                    <option>Member</option>
+                    <option>Payment</option>
+                  </select>
+
+                  <select id="comparison" class="form-control w-25 ml-3">
+                    <option selected disabled>Grouping</option>
+                    <option>Household Status</option>
+                    <option>Head of Household</option>
+                    <option>Household Size</option>
+                  </select>
+                </div>
+
+                <table class="table table-hover table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col">Field Name</th>
+                      <th scope="col">Field Category</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customExcel1">
+                          <label class="custom-control-label" for="customExcel1">Household Status</label>
+                        </div>
+                      </td>
+                      <td>Household</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customExcel2">
+                          <label class="custom-control-label" for="customExcel2">Head Of Household</label>
+                        </div>
+                      </td>
+                      <td>Household</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customExcel3">
+                          <label class="custom-control-label" for="customExcel3">Household Size</label>
+                        </div>
+                      </td>
+                      <td>Household</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customExcel4">
+                          <label class="custom-control-label" for="customExcel4">Initial Contact Date</label>
+                        </div>
+                      </td>
+                      <td>Household</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customExcel5">
+                          <label class="custom-control-label" for="customExcel5">Household Status</label>
+                        </div>
+                      </td>
+                      <td>Member</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customExcel6">
+                          <label class="custom-control-label" for="customExcel6">Head Of Household</label>
+                        </div>
+                      </td>
+                      <td>Member</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save Spreadsheet</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/js/bootstrap-multiselect.min.js"></script>
+    <script src="js/reportBuilder.js"></script>
+
+  </body>
+</html>

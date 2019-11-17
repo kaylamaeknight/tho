@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/yeti/bootstrap.min.css">
+    <link rel="stylesheet" href="css/output.css">
+    
+    <title>Report Builder</title>
+    <script src="https://kit.fontawesome.com/62be153382.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+
+    <div class="container py-5">
+      <div class="row">
+        <div class="hidden-xs col-md-3">
+
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Basic</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="builder.html"><strong>Builder</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="architect.html">Architect</a>
+            </li>
+          </ul>
+
+        </div>
+        <div class="col-12 col-md-8 ml-auto">
+          <h1>Report Builder</h1>
+          <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut fermentum urna. Vestibulum condimentum quis est ut bibendum. Proin orci purus, congue ut lorem et, tincidunt scelerisque augue. In convallis semper leo.</p>
+
+          <ul class="nav nav-tabs justify-content-end" id="reports" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="assigned-tab" data-toggle="tab" href="#assigned" role="tab" aria-controls="assigned" aria-selected="true">Assigned Reports</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="custom-tab" data-toggle="tab" href="#custom" role="tab" aria-controls="custom" aria-selected="false">Custom Reports</a>
+            </li>
+          </ul>
+          <div class="tab-content py-4" id="myTabContent">
+            <div class="tab-pane show active" id="assigned" role="tabpanel" aria-labelledby="assigned-tab">
+
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-5">
+                  <li class="breadcrumb-item"><a href="builder.html">Assigned Reports</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Editing: <em>Household Report</em></li>
+                </ol>
+              </nav>
+
+              <h2 class="mb-4">Editing: <em>Household Report</em></h2>
+
+              <div id="accordion">
+                <div class="card">
+                  <div class="card-header" id="headingSelectionCriteria">
+                    <h3 class="mb-0">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseSelectionCriteria" aria-expanded="true" aria-controls="collapseSelectionCriteria">
+                        1. Selection Criteria
+                      </button>
+                    </h3>
+                  </div>
+
+                  <div id="collapseSelectionCriteria" class="collapse show" aria-labelledby="headingSelectionCriteria" data-parent="#accordion">
+                    <div class="card-body">
+
+                      <div class="row">
+                        <div class="col-12 col-md-6">
+                          <div class="form-group mb-1">
+                            <select class="form-control" id="category">
+                              <option value="" disabled selected>Category</option>
+                              <option>Household</option>
+                              <option>Member</option>
+                              <option>Payment</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <div class="form-group mb-1">
+                            <select class="custom-select" id="basic" multiple="multiple">
+                              <option value="value1">Child Plus family ID</option>
+                              <option value="value2">Date household created</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+
+                      <p class="mb-4"><a href="#"><i class="fas fa-plus"></i> Add Row</a></p>
+
+                      <table class="table table-hover table-bordered">
+                        <thead>
+                          <tr>
+                            <th scope="col">Criteria</th>
+                            <th scope="col">Values</th>
+                            <th scope="col"><span class="sr-only">Edit or Delete</span></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><a href="#">Child Plus family ID</a></td>
+                            <td>
+                              <ul class="list-unstyled m-0">
+                                <li>No value entered</li>
+                                <li>2</li>
+                              </ul>
+                            </td>
+                            <td><a href="#"><i class="fas fa-edit fa-fw "></i></a><a href="#"><i class="ml-2 fa-fw  fas fa-trash-alt"></i></a></td>
+                          </tr>
+                          <tr>
+                            <td><a href="#">Date household created</a></td>
+                            <td>
+                              <ul class="list-unstyled m-0">
+                                <li>Value entered</li>
+                                <li>Between 2 and 3</li>
+                                <li>Equals 0</li>
+                                <li>Last 7 days</li>
+                              </ul>
+                            </td>
+                            <td><a href="#"><i class="fas fa-edit fa-fw "></i></a><a href="#"><i class="ml-2 fa-fw  fas fa-trash-alt"></i></a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <a class="btn btn-secondary">Next</a>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingSaveAndDownload">
+                    <h3 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSaveAndDownload" aria-expanded="false" aria-controls="collapseSaveAndDownload">
+                        2. Save & Download
+                      </button>
+                    </h3>
+                  </div>
+                  <div id="collapseSaveAndDownload" class="collapse" aria-labelledby="headingSaveAndDownload" data-parent="#accordion">
+                    <div class="card-body">
+                      <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut fermentum urna. Vestibulum condimentum quis est ut bibendum. Proin orci purus, congue ut lorem et, tincidunt scelerisque augue. In convallis semper leo.</p>
+
+                      <div class="d-flex">
+                        <a href="#" class="btn btn-primary mr-3">Save</a>
+                        <a href="#" class="btn btn-secondary mr-3">Download</a>
+                        <a href="#" class="btn btn-secondary">Map</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="tab-pane" id="custom" role="tabpanel" aria-labelledby="custom-tab">
+
+              <h2>Custom Reports</h2>
+              <p class="mb-5">The following table includes all of your custom reports. You can download the report, generate a map, or edit the selection criteria.</p>
+
+              <h3 class="mb-3">Household Reports</h3>
+              <table class="table table-hover table-bordered mb-5">
+                <thead>
+                  <tr>
+                    <th scope="col">Report Title</th>
+                    <th scope="col"><span class="sr-only">Download</span></th>
+                    <th scope="col"><span class="sr-only">Map</span></th>
+                    <th scope="col"><span class="sr-only">Edit</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><i class="fas fa-file-pdf fa-fw mr-2"></i> Household Report</td>
+                    <td><i class="fas fa-file-download fa-fw mr-2"></i> Download</td>
+                    <td><i class="fas fa-globe-americas fa-fw mr-2"></i> Map</td>
+                    <td><i class="fas fa-edit fa-fw mr-2"></i> Edit</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-file-excel fa-fw mr-2"></i> 4144 mail labels (household)</td>
+                    <td><i class="fas fa-file-download fa-fw mr-2"></i> Download</td>
+                    <td><i class="fas fa-globe-americas fa-fw mr-2"></i> Map</td>
+                    <td><i class="fas fa-edit fa-fw mr-2"></i> Edit</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-file-pdf fa-fw mr-2"></i> 5160 mail labels (household)</td>
+                    <td><i class="fas fa-file-download fa-fw mr-2"></i> Download</td>
+                    <td><i class="fas fa-globe-americas fa-fw mr-2"></i> Map</td>
+                    <td><i class="fas fa-edit fa-fw mr-2"></i> Edit</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-file-excel fa-fw mr-2"></i> Household Emails</td>
+                    <td><i class="fas fa-file-download fa-fw mr-2"></i> Download</td>
+                    <td><i class="fas fa-globe-americas fa-fw mr-2"></i> Map</td>
+                    <td><i class="fas fa-edit fa-fw mr-2"></i> Edit</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h3 class="mb-3">Member Reports</h3>
+              <table class="table table-hover table-bordered mb-5">
+                <thead>
+                  <tr>
+                    <th scope="col">Report Title</th>
+                    <th scope="col"><span class="sr-only">Download</span></th>
+                    <th scope="col"><span class="sr-only">Map</span></th>
+                    <th scope="col"><span class="sr-only">Edit</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><i class="fas fa-file-pdf fa-fw mr-2"></i> Household Report</td>
+                    <td><i class="fas fa-file-download fa-fw mr-2"></i> Download</td>
+                    <td><i class="fas fa-globe-americas fa-fw mr-2"></i> Map</td>
+                    <td><i class="fas fa-edit fa-fw mr-2"></i> Edit</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-file-excel fa-fw mr-2"></i> 4144 mail labels (household)</td>
+                    <td><i class="fas fa-file-download fa-fw mr-2"></i> Download</td>
+                    <td><i class="fas fa-globe-americas fa-fw mr-2"></i> Map</td>
+                    <td><i class="fas fa-edit fa-fw mr-2"></i> Edit</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-file-pdf fa-fw mr-2"></i> 5160 mail labels (household)</td>
+                    <td><i class="fas fa-file-download fa-fw mr-2"></i> Download</td>
+                    <td><i class="fas fa-globe-americas fa-fw mr-2"></i> Map</td>
+                    <td><i class="fas fa-edit fa-fw mr-2"></i> Edit</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-file-excel fa-fw mr-2"></i> Household Emails</td>
+                    <td><i class="fas fa-file-download fa-fw mr-2"></i> Download</td>
+                    <td><i class="fas fa-globe-americas fa-fw mr-2"></i> Map</td>
+                    <td><i class="fas fa-edit fa-fw mr-2"></i> Edit</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h3 class="mb-3">Payment Reports</h3>
+              <table class="table table-hover table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">Report Title</th>
+                    <th scope="col"><span class="sr-only">Download</span></th>
+                    <th scope="col"><span class="sr-only">Map</span></th>
+                    <th scope="col"><span class="sr-only">Edit</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><i class="fas fa-file-pdf fa-fw mr-2"></i> Household Report</td>
+                    <td><i class="fas fa-file-download fa-fw mr-2"></i> Download</td>
+                    <td><i class="fas fa-globe-americas fa-fw mr-2"></i> Map</td>
+                    <td><i class="fas fa-edit fa-fw mr-2"></i> Edit</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-file-excel fa-fw mr-2"></i> 4144 mail labels (household)</td>
+                    <td><i class="fas fa-file-download fa-fw mr-2"></i> Download</td>
+                    <td><i class="fas fa-globe-americas fa-fw mr-2"></i> Map</td>
+                    <td><i class="fas fa-edit fa-fw mr-2"></i> Edit</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-file-pdf fa-fw mr-2"></i> 5160 mail labels (household)</td>
+                    <td><i class="fas fa-file-download fa-fw mr-2"></i> Download</td>
+                    <td><i class="fas fa-globe-americas fa-fw mr-2"></i> Map</td>
+                    <td><i class="fas fa-edit fa-fw mr-2"></i> Edit</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-file-excel fa-fw mr-2"></i> Household Emails</td>
+                    <td><i class="fas fa-file-download fa-fw mr-2"></i> Download</td>
+                    <td><i class="fas fa-globe-americas fa-fw mr-2"></i> Map</td>
+                    <td><i class="fas fa-edit fa-fw mr-2"></i> Edit</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

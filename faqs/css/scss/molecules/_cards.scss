@@ -1,0 +1,9 @@
+.card{
+  .card-header{
+    background: map-get($colors, 'white');
+
+    h3{
+      margin: 0;
+    }
+  }
+}

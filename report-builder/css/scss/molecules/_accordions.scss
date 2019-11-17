@@ -1,0 +1,25 @@
+.accordion{
+  .card-header{
+    cursor: pointer;
+
+    h3{
+      display: flex;
+      margin: 0;
+      align-items: center;
+
+      .fas{
+        margin-top: 0.25rem;
+        color: rgba(0,0,0,.2);
+        transition: transform 0.25s ease;
+      }
+    }
+
+    &.collapsed{
+      h3{
+        .fas{
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}

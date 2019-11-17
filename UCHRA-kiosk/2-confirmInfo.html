@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>UCHRA Delivering Hope</title>
+  </head>
+  <body>
+
+    <header class="header">
+      <h1 class="m-0">
+        <span class="logo-1">UCHRA</span>
+        <span class="logo-2">Delivering Hope</span>
+      </h1>
+    </header>
+
+    <main class="py-5">
+
+      <!-- STEP -->
+      <div class="d-flex justify-content-center">
+        <div>
+
+          <div class="form-group mb-5">
+            <label for="step2-correctInfo">Is the following contact information correct?</label>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="step2-correctInfo" id="step2-correctInfoYes" value="1">
+              <label class="form-check-label" for="step2-correctInfoYes">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="step2-correctInfo" id="step2-correctInfoNo" value="0">
+              <label class="form-check-label" for="step2-correctInfoNo">No</label>
+            </div>
+          </div>
+
+          <div id="confirmInfo">
+            <div class="form-group">
+              <div class="mb-3">
+                <label for="step2-address">Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="Street Address" value="123 Address Street" disabled>
+              </div>
+              <div class="form-row">
+                <div class="col-5">
+                  <input type="text" class="form-control" id="inputCity" placeholder="City" value="Shoreview" disabled>
+                </div>
+                <div class="col-4">
+                  <select id="inputState" class="form-control" disabled>
+                    <option vlaue="">State</option>
+                    <option selected>Minnesoa</option>
+                  </select>
+                </div>
+                <div class="col-3">
+                  <input type="text" class="form-control" id="inputZip" placeholder="Zip" value="55555-5555" disabled>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="step2-email">Email Address</label>
+              <input type="email" id="step2-email" class="form-control email" value="hello@gmail.com" disabled>
+            </div>
+
+            <div class="form-group mb-5">
+              <label for="step2-email">Phone Number</label>
+              <input type="tel" id="step2-phone" class="form-control tel" value="555-555-5555" disabled>
+            </div>
+          </div>
+
+          <a href="3-shutoffNotice.html" id="step2-nextBtn" class="btn btn-primary d-none">Next</a>
+          <a href="#" id="step2-updateBtn" class="btn btn-primary d-none">Update</a>
+
+        </div>
+      </div>
+      <!-- /STEP -->
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>

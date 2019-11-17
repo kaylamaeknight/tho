@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/output.css">
+
+    <title>FAQs</title>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/62be153382.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+
+    <header class="header py-4 border-bottom">
+      <div class="container d-flex justify-content-between align-items-center">
+        <h1>Application Title</h1>
+        <img width="228" height="40" src="images/tho-software-logo.png" alt="THO Software" />
+      </div>
+    </header>
+
+    <main class="py-5">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-end">
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="resources-tab" data-toggle="tab" href="#resources" role="tab" aria-controls="resources" aria-selected="true">Resources</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="qa-tab" data-toggle="tab" href="#qa" role="tab" aria-controls="qa" aria-selected="false">Questions &amp; Answers</a>
+            </li>
+          </ul>
+
+          <a id="addResourceLabel" class="btn btn-secondary ml-auto" href="#" data-toggle="modal" data-target="#addResource"><i class="fas fa-file-alt fa"></i> Add Resource</a>
+          <a id="addQuestionLabel" class="btn btn-secondary ml-3" href="#" data-toggle="modal" data-target="#addQuestion"><i class="fas fa-question-circle fa"></i> Post Question</a>
+
+        </div>
+        <div class="tab-content">
+          <div class="tab-pane show active py-5" id="resources" role="tabpanel" aria-labelledby="resources-tab">
+
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Resource Title</th>
+                  <th scope="col" class="fit">Date Created</th>
+                  <th scope="col" class="fit">Category</th>
+                  <th scope="col" class="fit">Source</th>
+                  <th scope="col" class="fit"></th>
+                  <th scope="col" class="fit"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th><a href="resource.html">Resource Title PDF</a></th>
+                  <td class="fit">1/1/2019</td>
+                  <td class="fit">Category Name</td>
+                  <td class="fit">Source Name</td>
+                  <th class="fit"><a href="#"><i class="fas fa-download"></i> DOWNLOAD</a></th>
+                  <th class="fit"><a href="resource.html#comments"><i class="fas fa-comment"></i> 2 COMMENTS</a></th>
+                </tr>
+                <tr>
+                  <th><a href="resource.html">Website Title</a></th>
+                  <td class="fit">1/1/2019</td>
+                  <td class="fit">Category Name</td>
+                  <td class="fit">Source Name</td>
+                  <th class="fit"><a href="#"><i class="fas fa-globe"></i> VISIT</a></th>
+                  <th class="fit"><a href="resource.html"><i class="fas fa-comment"></i> 2 COMMENTS</a></th>
+                </tr>
+                <tr>
+                  <th><a href="resource.html">Resource Title PDF</a></th>
+                  <td class="fit">1/1/2019</td>
+                  <td class="fit">Category Name</td>
+                  <td class="fit">Source Name</td>
+                  <th class="fit"><a href="#"><i class="fas fa-download"></i> DOWNLOAD</a></th>
+                  <th class="fit"><a href="resource.html#comments"><i class="fas fa-comment"></i> 2 COMMENTS</a></th>
+                </tr>
+                <tr>
+                  <th><a href="resource.html">Website Title</a></th>
+                  <td class="fit">1/1/2019</td>
+                  <td class="fit">Category Name</td>
+                  <td class="fit">Source Name</td>
+                  <th class="fit"><a href="#"><i class="fas fa-globe"></i> VISIT</a></th>
+                  <th class="fit"><a href="resource.html"><i class="fas fa-comment"></i> 2 COMMENTS</a></th>
+                </tr>
+                <tr>
+                  <th><a href="resource.html">Resource Title PDF</a></th>
+                  <td class="fit">1/1/2019</td>
+                  <td class="fit">Category Name</td>
+                  <td class="fit">Source Name</td>
+                  <th class="fit"><a href="#"><i class="fas fa-download"></i> DOWNLOAD</a></th>
+                  <th class="fit"><a href="resource.html#comments"><i class="fas fa-comment"></i> 2 COMMENTS</a></th>
+                </tr>
+                <tr>
+                  <th><a href="resource.html">Website Title</a></th>
+                  <td class="fit">1/1/2019</td>
+                  <td class="fit">Category Name</td>
+                  <td class="fit">Source Name</td>
+                  <th class="fit"><a href="#"><i class="fas fa-globe"></i> VISIT</a></th>
+                  <th class="fit"><a href="resource.html"><i class="fas fa-comment"></i> 2 COMMENTS</a></th>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+          <div class="tab-pane py-5" id="qa" role="tabpanel" aria-labelledby="qa-tab">
+
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Question</th>
+                  <th scope="col" class="fit">Date Created</th>
+                  <th scope="col" class="fit">Author</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th><a href="answer.html">Ut lorem lorem, scelerisque nec suscipit eget, scelerisque convallis orci?</a></th>
+                  <td class="fit">1/1/2019</td>
+                  <td class="fit">Author Name</td>
+                </tr>
+                <tr>
+                  <th><a href="answer.html">Ut lorem lorem, scelerisque nec suscipit eget, scelerisque convallis orci?</a></th>
+                  <td class="fit">1/1/2019</td>
+                  <td class="fit">Author Name</td>
+                </tr>
+                <tr>
+                  <th><a href="answer.html">Ut lorem lorem, scelerisque nec suscipit eget, scelerisque convallis orci?</a></th>
+                  <td class="fit">1/1/2019</td>
+                  <td class="fit">Author Name</td>
+                </tr>
+                <tr>
+                  <th><a href="answer.html">Ut lorem lorem, scelerisque nec suscipit eget, scelerisque convallis orci?</a></th>
+                  <td class="fit">1/1/2019</td>
+                  <td class="fit">Author Name</td>
+                </tr>
+                <tr>
+                  <th><a href="answer.html">Ut lorem lorem, scelerisque nec suscipit eget, scelerisque convallis orci?</a></th>
+                  <td class="fit">1/1/2019</td>
+                  <td class="fit">Author Name</td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <div class="modal" id="addResource" tabindex="-1" role="dialog" aria-labelledby="addResourceLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Edit Resource</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+            <form>
+              <div class="form-group">
+                <label for="title">Resource Title</label>
+                <input type="text" class="form-control" id="title">
+              </div>
+              <div class="form-group">
+                <label for="category">Category</label>
+                <select id="category" class="form-control">
+                  <option>Option One</option>
+                  <option>Option Two</option>
+                  <option>Option Three</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="source">Source</label>
+                <select id="source" class="form-control col-md-6">
+                  <option>Option One</option>
+                  <option>Option Two</option>
+                  <option>Option Three</option>
+                </select>
+              </div>
+
+              <div class="form-group mb-0">
+                <label>Resource Type</label>
+                <div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input id="urlRadio" type="radio" name="resourceType" class="custom-control-input" value="url">
+                    <label id="urlRadioLabel" class="custom-control-label" for="urlRadio">URL</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input id="uploadRadio" type="radio" name="resourceType" class="custom-control-input" value="upload">
+                    <label id="uploadRadioLabel" class="custom-control-label" for="uploadRadio">Upload</label>
+                  </div>
+                </div>
+              </div>
+
+              <div id="url" class="collapse" aria-labelledby="urlRadioLabel">
+                <div class="form-group mt-4 mb-0">
+                  <label for="title">URL</label>
+                  <input type="url" class="form-control">
+                </div>
+              </div>
+
+              <div id="upload" class="collapse" aria-labelledby="uploadRadioLabel">
+                <div class="form-group mt-4 mb-0">
+                  <label for="title">Upload</label>
+                  <input type="file">
+                </div>
+              </div>
+
+            </form>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="addQuestion" tabindex="-1" role="dialog" aria-labelledby="addQuestionlabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addQuestionLabel">Post Question</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+            <form>
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" class="form-control" id="name">
+              </div>
+              <div class="form-group">
+                <label for="title">Question</label>
+                <input type="text" class="form-control" id="title">
+              </div>
+              <div class="form-group mb-0">
+                <label for="message">Detailed Question</label>
+                <textarea id="message" class="form-control" rows="5"></textarea>
+              </div>
+            </form>
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+
+  </body>
+</html>

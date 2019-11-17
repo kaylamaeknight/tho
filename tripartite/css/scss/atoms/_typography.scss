@@ -1,0 +1,30 @@
+html,
+body{
+  font: 500 16px/150% Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: map-get($colors, 'blue');
+}
+
+h2{
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+h3{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+hr{
+  margin: 2rem 0;
+}
+
+a{
+  cursor: pointer;
+}

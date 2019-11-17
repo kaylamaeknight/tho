@@ -1,0 +1,156 @@
+/* Colors */
+/* Fonts */
+/* Typography */
+html, body {
+  font: normal 16px/140% Helvetica, Arial, sans-serif;
+  color: #444;
+}
+
+h2,
+.h2 {
+  margin: 0 0 3rem;
+  font: 600 1.25rem/125% "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  color: #c64e2e;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+h3,
+.h3 {
+  font: 600 1rem/125% "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+p,
+.p {
+  margin: 0 0 1rem;
+}
+
+a {
+  text-decoration: underline;
+}
+a.error {
+  font-weight: 600;
+  color: #c64e2e;
+}
+
+/* Forms */
+label,
+.label {
+  display: block;
+  margin: 0 0 0.75rem;
+  font: 600 1rem/100% "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  letter-spacing: 1px;
+}
+
+.form-group {
+  margin: 0 0 2rem;
+}
+
+.form-check-input {
+  margin-top: 0;
+}
+
+/* Buttons */
+.btn,
+button {
+  padding: 0.5rem 2rem;
+  border-radius: 4px;
+  font: 600 1rem/100% "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #3a2d64;
+  border-color: #3a2d64;
+}
+.btn:hover,
+button:hover {
+  background: #c64e2e;
+  border-color: #c64e2e;
+}
+
+/* Notices */
+.card {
+  max-width: 500px;
+  border-width: 2px;
+}
+.card .card-header {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.card.card-error {
+  border-color: #c64e2e;
+  color: #c64e2e;
+}
+.card.card-error .card-header {
+  background: #f8d7da;
+  border-bottom: 2px solid #c64e2e;
+}
+.card.card-success {
+  border-color: green;
+  color: green;
+}
+.card.card-success .card-header {
+  background: #d4edda;
+  border-bottom: 2px solid green;
+}
+
+/* Time Table */
+.timeslots {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.timeslots li {
+  margin: 0.5rem 0;
+}
+.timeslots li a {
+  display: block;
+  position: relative;
+  margin-left: -1rem;
+  padding: 0.5rem 1rem;
+  color: #444;
+  text-decoration: none;
+}
+.timeslots li a:hover {
+  background: #e6f5e9;
+}
+.timeslots li a.active {
+  background: #d4edda;
+}
+
+.chooseWeek {
+  font: 600 1rem/100% "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  color: #c64e2e;
+}
+.chooseWeek a {
+  color: #c64e2e;
+  text-decoration: none;
+}
+
+/* Header */
+.header {
+  padding: 2rem 0;
+  background: #3a2d64;
+  text-align: center;
+}
+.header h1 {
+  font-family: 'Times New Roman', serif;
+  text-transform: uppercase;
+}
+.header h1 .logo-1 {
+  display: block;
+  font-size: 80px;
+  line-height: 90%;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.header h1 .logo-2 {
+  display: block;
+  font-size: 24px;
+  line-height: 100%;
+  color: #d25b3c;
+  letter-spacing: 2px;
+}

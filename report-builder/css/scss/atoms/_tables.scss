@@ -1,0 +1,14 @@
+table,
+.table{
+  font-size: 1rem;
+
+  .fit{
+    width:1%;
+    white-space:nowrap;
+  }
+
+  label{
+    font-weight: 500;
+    text-transform: none;
+  }
+}

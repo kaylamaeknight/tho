@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/yeti/bootstrap.min.css">
+    <link rel="stylesheet" href="css/output.css">
+    
+    <title>Report Builder</title>
+    <script src="https://kit.fontawesome.com/62be153382.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+
+    <div class="container py-5">
+      <div class="row">
+        <div class="hidden-xs col-md-3">
+
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Basic</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="builder.html">Builder</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="architect.html"><strong>Architect</strong></a>
+            </li>
+          </ul>
+
+        </div>
+        <div class="col-12 col-md-8 ml-auto">
+          <h1>Report Builder</h1>
+          <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut fermentum urna. Vestibulum condimentum quis est ut bibendum. Proin orci purus, congue ut lorem et, tincidunt scelerisque augue. In convallis semper leo.</p>
+
+          <ul class="nav nav-tabs justify-content-end" id="reports" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="assigned-tab" data-toggle="tab" href="#assigned" role="tab" aria-controls="assigned" aria-selected="true">Assigned Reports</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="custom-tab" data-toggle="tab" href="#custom" role="tab" aria-controls="custom" aria-selected="false">Custom Reports</a>
+            </li>
+          </ul>
+          <div class="tab-content py-4" id="myTabContent">
+            <div class="tab-pane show active" id="assigned" role="tabpanel" aria-labelledby="assigned-tab">
+
+              <h2>Assigned Reports</h2>
+              <p class="mb-5">The following table includes all reports assigned to you. After reviewing which report you would like based on the listed criteria, and click on a row to download that report.</p>
+
+              <table class="table table-hover table-bordered mb-5">
+                <thead>
+                  <tr>
+                    <th scope="col">Report Title</th>
+                    <th scope="col">Report Description</th>
+                    <th scope="col"><span class="sr-only">Edit or Delete</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="#"><i class="fas fa-file-pdf fa-fw mr-2"></i> Chore Program</a></td>
+                    <td>New Report for SETHRA</td>
+                    <td><a href="architect-edit.html"><i class="fas fa-edit fa-fw "></i></a><a href="#"><i class="ml-2 fa-fw  fas fa-trash-alt"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><i class="fas fa-file-pdf fa-fw mr-2"></i> Date Created</a></td>
+                    <td></td>
+                    <td><a href="architect-edit.html"><i class="fas fa-edit fa-fw "></i></a><a href="#"><i class="ml-2 fa-fw  fas fa-trash-alt"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><i class="fas fa-file-pdf fa-fw mr-2"></i> Head Start Recruitment</a></td>
+                    <td>Remember to change the dates next year.</td>
+                    <td><a href="architect-edit.html"><i class="fas fa-edit fa-fw "></i></a><a href="#"><i class="ml-2 fa-fw  fas fa-trash-alt"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><i class="fas fa-file-pdf fa-fw mr-2"></i> Chore Program</a></td>
+                    <td>Created for Demo 6.15.2019</td>
+                    <td><a href="architect-edit.html"><i class="fas fa-edit fa-fw "></i></a><a href="#"><i class="ml-2 fa-fw  fas fa-trash-alt"></i></a></td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+              <div class="d-flex">
+                <a href="#" class="btn btn-secondary mr-3"><i class="fas fa-file-download fa-fw mr-2"></i> Download All</a>
+                <a href="architect-edit.html" class="btn btn-secondary"><i class="fas fa-plus"></i> New Report</a>
+              </div>
+            </div>
+            <div class="tab-pane" id="custom" role="tabpanel" aria-labelledby="custom-tab">
+
+              <h2>Custom Reports</h2>
+              <p class="mb-5">The following table includes all of your custom reports. You can download the report, generate a map, or edit the selection criteria.</p>
+
+              <table class="table table-hover table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">Report Title</th>
+                    <th scope="col"><span class="sr-only">Download</span></th>
+                    <th scope="col"><span class="sr-only">Map</span></th>
+                    <th scope="col"><span class="sr-only">Edit</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><i class="fas fa-file-pdf fa-fw mr-2"></i> Household Report</td>
+                    <td><a href="#"><i class="fas fa-file-download fa-fw mr-2"></i> Download</a></td>
+                    <td><a href="#"><i class="fas fa-globe-americas fa-fw mr-2"></i> Map</a></td>
+                    <td><a href="architect-edit.html"><i class="fas fa-edit fa-fw mr-2"></i> Edit</a></td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-file-excel fa-fw mr-2"></i> 4144 mail labels (household)</td>
+                    <td><a href="#"><i class="fas fa-file-download fa-fw mr-2"></i> Download</a></td>
+                    <td><a href="#"><i class="fas fa-globe-americas fa-fw mr-2"></i> Map</a></td>
+                    <td><a href="architect-edit.html"><i class="fas fa-edit fa-fw mr-2"></i> Edit</a></td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-file-pdf fa-fw mr-2"></i> Head Start Recruitment</td>
+                    <td><a href="#"><i class="fas fa-file-download fa-fw mr-2"></i> Download</a></td>
+                    <td><a href="#"><i class="fas fa-globe-americas fa-fw mr-2"></i> Map</a></td>
+                    <td><a href="architect-edit.html"><i class="fas fa-edit fa-fw mr-2"></i> Edit</a></td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-file-pdf fa-fw mr-2"></i> Chore Program</td>
+                    <td><a href="#"><i class="fas fa-file-download fa-fw mr-2"></i> Download</a></td>
+                    <td><a href="#"><i class="fas fa-globe-americas fa-fw mr-2"></i> Map</a></td>
+                    <td><a href="architect-edit.html"><i class="fas fa-edit fa-fw mr-2"></i> Edit</a></td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

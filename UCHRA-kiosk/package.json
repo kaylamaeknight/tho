@@ -1,0 +1,14 @@
+{
+  "name": "MVS",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "ruby": "^0.6.1"
+  },
+  "dependencies": {
+    "@nobleclem/jquery-multiselect": "^2.4.16"
+  }
+}
