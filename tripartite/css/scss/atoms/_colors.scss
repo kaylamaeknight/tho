@@ -9,3 +9,22 @@ $colors: (
   'gray-4': #888888,
   'black': #444444
 );
+
+@each $key, $value in $colors {
+  .color-#{$key}{
+    color: $value !important;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    a{
+      color: $value !important;
+    }
+  }
+}
+
+.bg-blue{
+  background: rgba(map-get($colors, 'blue'), 10%);
+}

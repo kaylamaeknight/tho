@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/output.css">
+
+    <title>Tripartite Board</title>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/62be153382.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+
+    <header class="header py-4 border-bottom">
+      <div class="container d-flex justify-content-between align-items-center">
+        <h1>{Agency} Board Members</h1>
+        <img width="228" height="40" src="images/tho-software-logo.png" alt="THO Software" />
+      </div>
+    </header>
+
+    <main class="py-5">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <small class="d-block"><strong><a href="index.html"><i class="far fa-long-arrow-alt-left"></i> BACK TO AGENCIES</a></strong></small>
+          <a class="btn btn-secondary" href="#" data-toggle="modal" data-target="#addMember">Add Member</a>
+        </div>
+
+        <table class="table table-striped">
+          <thead class="thead">
+            <tr>
+              <th scope="col">Board Member</th>
+              <th scope="col" class="fit">Member Type</th>
+              <th scope="col" class="fit">Status</th>
+              <th scope="col" class="fit">Date Left</th>
+              <th scope="col" class="fit"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th><a href="#">Member Name</a></th>
+              <td class="fit">Community</td>
+              <td class="fit">Active</td>
+              <td class="fit">1/1/2019</td>
+              <th class="fit"><a href="#" data-toggle="modal" data-target="#addMember">Edit</a></th>
+            </tr>
+            <tr>
+              <th><a href="#">Member Name</a></th>
+              <td class="fit">Community</td>
+              <td class="fit">Active</td>
+              <td class="fit">1/1/2019</td>
+              <th class="fit"><a href="#" data-toggle="modal" data-target="#addMember">Edit</a></th>
+            </tr>
+            <tr>
+              <th><a href="#">Member Name</a></th>
+              <td class="fit">Community</td>
+              <td class="fit">Active</td>
+              <td class="fit">1/1/2019</td>
+              <th class="fit"><a href="#" data-toggle="modal" data-target="#addMember">Edit</a></th>
+            </tr>
+            <tr>
+              <th><a href="#">Member Name</a></th>
+              <td class="fit">Community</td>
+              <td class="fit">Active</td>
+              <td class="fit">1/1/2019</td>
+              <th class="fit"><a href="#" data-toggle="modal" data-target="#addMember">Edit</a></th>
+            </tr>
+            <tr>
+              <th><a href="#">Member Name</a></th>
+              <td class="fit">Community</td>
+              <td class="fit">Active</td>
+              <td class="fit">1/1/2019</td>
+              <th class="fit"><a href="#" data-toggle="modal" data-target="#addMember">Edit</a></th>
+            </tr>
+            <tr>
+              <th><a href="#">Member Name</a></th>
+              <td class="fit">Community</td>
+              <td class="fit">Active</td>
+              <td class="fit">1/1/2019</td>
+              <th class="fit"><a href="#" data-toggle="modal" data-target="#addMember">Edit</a></th>
+            </tr>
+            <tr>
+              <th><a href="#">Member Name</a></th>
+              <td class="fit">Community</td>
+              <td class="fit">Active</td>
+              <td class="fit">1/1/2019</td>
+              <th class="fit"><a href="#" data-toggle="modal" data-target="#addMember">Edit</a></th>
+            </tr>
+            <tr>
+              <th><a href="#">Member Name</a></th>
+              <td class="fit">Community</td>
+              <td class="fit">Active</td>
+              <td class="fit">1/1/2019</td>
+              <th class="fit"><a href="#" data-toggle="modal" data-target="#addMember">Edit</a></th>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </main>
+
+    <div class="modal" id="addMember" tabindex="-1" role="dialog" aria-labelledby="addMemberLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="addMemberLabel">Add Member</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body py-0 row">
+
+            <section class="p-4 col-md-4 bg-blue">
+              <h3>Personal Information</h3>
+
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" class="form-control" id="name">
+              </div>
+
+              <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" class="form-control mb-2" id="address" placeholder="Street Address">
+
+                <div class="form-row">
+                  <div class="col-6">
+                    <input type="text" class="form-control" id="city" placeholder="City">
+                  </div>
+                  <div class="col-3">
+                    <select class="form-control">
+                      <option>State</option>
+                    </select>
+                  </div>
+                  <div class="col-3">
+                    <input type="text" class="form-control" id="zip" placeholder="Zip">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" class="form-control" id="phone">
+              </div>
+
+              <div class="form-group">
+                <label for="dob">Birth Date</label>
+                <input type="date" class="form-control" id="dob">
+              </div>
+
+              <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" class="form-control">
+                  <option>Option One</option>
+                  <option>Option Two</option>
+                  <option>Option Three</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="employment">Employment Information</label>
+                <input type="text" class="form-control mb-2" id="employment" placeholder="Company Name">
+                <input type="text" class="form-control mb-2" id="employment" placeholder="Professional Title">
+                <input type="tel" class="form-control" id="employment" placeholder="Company Phone">
+              </div>
+            </section>
+
+            <section class="p-4 col-md-8">
+              <h3>Member Information</h3>
+
+              <div class="row">
+                <div class="col-4">
+                  <div class="form-group">
+                    <label for="member_type">Member Type</label>
+                    <select id="member_type" class="form-control">
+                      <option>Option One</option>
+                      <option>Option Two</option>
+                      <option>Option Three</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-group">
+                    <label for="date_joined">Date Joined</label>
+                    <input type="date" class="form-control" id="date_joined">
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-group">
+                    <label for="date_exited">Date Exited</label>
+                    <input type="date" class="form-control" id="date_exited">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="expertise">Areas of Expertise</label>
+                <select id="expertise" class="form-control">
+                  <option>Option One</option>
+                  <option>Option Two</option>
+                  <option>Option Three</option>
+                </select>
+                <a href="#" class="add-row"><i class="far fa-plus mr-2"></i> Add Row</a>
+              </div>
+
+              <div class="form-group">
+                <label for="committee_assignments">Committee Assignments</label>
+                <select id="committee_assignments" class="form-control">
+                  <option>Option One</option>
+                  <option>Option Two</option>
+                  <option>Option Three</option>
+                </select>
+                <a href="#" class="add-row"><i class="far fa-plus mr-2"></i> Add Row</a>
+              </div>
+
+              <div class="form-group">
+                <label for="how_recruited">How Recruited</label>
+                <select id="how_recruited" class="form-control">
+                  <option>Option One</option>
+                  <option>Option Two</option>
+                  <option>Option Three</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="training">Training Received Date</label>
+                <div class="form-row">
+                  <div class="col-8">
+                    <input type="text" class="form-control" id="training">
+                  </div>
+                  <div class="col-4">
+                    <input type="date" class="form-control" id="training_date">
+                  </div>
+                </div>
+                <a href="#" class="add-row"><i class="far fa-plus mr-2"></i> Add Row</a>
+              </div>
+
+              <div class="form-group">
+                <label for="orientation_date">Orientation Complete Date</label>
+                <input type="date" class="form-control" id="orientation_date">
+              </div>
+
+              <div class="form-group">
+                <label for="bylaws_date">Bylaws Signed Date</label>
+                <input type="date" class="form-control" id="bylaws_date">
+              </div>
+
+              <div class="form-group">
+                <label for="coi_document">Conflict of Interest Document(s)</label>
+                <div class="form-row">
+                  <div class="col-8">
+                    <input type="file" class="form-control" id="coi_document">
+                  </div>
+                  <div class="col-4">
+                    <input type="date" class="form-control" id="coi_document_date">
+                  </div>
+                </div>
+                <a href="#" class="view-document"><i class="fas fa-eye mr-1"></i> View Document</a>
+                <a href="#" class="add-row"><i class="far fa-plus mr-2"></i> Add Row</a>
+              </div>
+
+              <button type="button" class="btn btn-primary">Save</button>
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  </body>
+</html>

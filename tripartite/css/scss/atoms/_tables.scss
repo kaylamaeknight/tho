@@ -11,4 +11,30 @@ table,
     font-weight: 500;
     text-transform: none;
   }
+
+  .thead{
+    background: map-get($colors, 'blue');
+    color: map-get($colors, 'white');
+  }
+
+  .thead-secondary{
+    border: 0;
+
+    th,
+    td{
+      border: 0;
+      color: map-get($colors, 'blue');
+      text-align: center;
+
+      &.th-secondary{
+        border: 2px solid map-get($colors, 'blue');
+        border-bottom: 0;
+      }
+    }
+  }
+
+  th,
+  td{
+    padding: 0.75rem 1.5rem;
+  }
 }

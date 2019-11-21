@@ -1,0 +1,10 @@
+.thumbs{
+  opacity: 0.75;
+  color: map-get($colors, 'black');
+
+  &:hover,
+  &.active{
+    opacity: 1;
+    color: map-get($colors, 'blue');
+  }
+}

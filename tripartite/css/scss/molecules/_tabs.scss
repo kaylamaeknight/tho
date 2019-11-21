@@ -1,0 +1,19 @@
+.nav-tabs{
+  border-bottom: 2px solid map-get($colors, 'blue');
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: map-get($colors, 'blue');
+
+  .nav-link{
+    margin-bottom: -2px;
+    border: 2px solid transparent;
+    opacity: 0.5;
+
+    &.active{
+      border-color: map-get($colors, 'blue') map-get($colors, 'blue') map-get($colors, 'white');
+      color: map-get($colors, 'blue');
+      opacity: 1;
+    }
+  }
+}
