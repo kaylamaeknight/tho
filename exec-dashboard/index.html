@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.css">
+    <link rel="stylesheet" href="css/output.css">
+
+    <!-- ChartJS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    
+    <title>Exec Dashboard</title>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/62be153382.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+    <!-- Header -->
+    <!--
+    I mimicked the current header so all links should work and look the same. 
+    We can use this in a new master page, or otherwise, perhaps use everything but this as an iframe
+    -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">Demo Agency</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://thosolutions.com/tnweb/SearchHouseholdsResults.aspx">Search</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://thosolutions.com/tnweb/CreateHousehold.aspx">New household</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://thosolutions.com/tnweb/CreateHouseholdShortForm.aspx">New short form household</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:__doPostBack('ctl00$btnClientContacts','')">Client contacts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://thosolutions.com/tnweb/UtilitiesBlank.aspx">Utilities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:__doPostBack('ctl00$btnFollowUpsTopMenu','')">Follow ups</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:__doPostBack('ctl00$lnkMonitorFeedback','')"><strong class="color-red"></strong>Reviewed Data Entry</strong></a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://thosolutions.com/tnweb/SetUpBlank.aspx">Setup</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://thosolutions.com/tnweb/AdminBlank.aspx">Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://thosolutions.com/tnweb/login.aspx">Log out</a>
+                    </li>
+                </ul>
+            </div>
+            </nav>
+    </header>
+    <!-- /Header -->
+
+    <main>
+        <header class="py-5 bg-lightblue">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div>
+                    <h1>Exec Dashboard</h1>
+                    <p class="m-0"><strong>Number of Households Served: 47</strong></p>
+                </div>
+            
+                <div class="d-flex">
+                    <div class="form-group">
+                        <label for="county">County</label>
+                        <select class="form-control" id="county">
+                            <option>All Counties</option>
+                            <option>99 Astor</option>
+                            <option>99 County 1</option>
+                            <option>99 County 10</option>
+                            <option>99 County 1</option>
+                        </select>
+                    </div>
+        
+                    <div class="form-group ml-5">
+
+                        <div class="form-row">
+                            <div class="col">
+                                <label for="start_date" id="start_date_label">Start Date</label>
+                                <input type="date" class="form-control" id="start_date" aria-describedby="start_date_label" placeholder="MM/DD/YYYY">
+                            </div>
+                
+                            <div class="col">
+                                <label for="end_date" id="end_date_label">End Date</label>
+                                <input type="date" class="form-control" id="end_date" aria-describedby="end_date_label" placeholder="MM/DD/YYYY">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="container py-5">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="servicesTab-tab" data-toggle="tab" href="#servicesTab" role="tab" aria-controls="servicesTab" aria-selected="true">Top Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="householdsTab-tab" data-toggle="tab" href="#householdsTab" role="tab" aria-controls="householdsTab" aria-selected="false">Households</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="liheap-tab" data-toggle="tab" href="#liheap" role="tab" aria-controls="liheap" aria-selected="false">LIHEAP Applications</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="pt-5 tab-pane show active" id="servicesTab" role="tabpanel" aria-labelledby="servicesTab-tab">
+
+                    <div class="row justify-content-between">
+                        <div class="col-md-7 pr-4">
+
+                            <div class="card card-body h-100">
+                                <h2 class="mb-4 d-flex align-items-center">
+                                    Top Services
+
+                                    <select class="w-auto form-control ml-auto">
+                                        <option value="">By count</option>
+                                        <option>By cost</option>
+                                    </select>
+
+                                    <select data-chart="serviceCategoriesChart" class="js-changeData w-auto form-control ml-3">
+                                        <option value="AllServicesData">All Services</option>
+                                        <option value="GEDsAreUsData">GEDs Are Us</option>
+                                        <option value="AmericanRedCrossData">American Red Cross</option>
+                                        <option value="CountyServicesData">County Services</option>
+                                        <option value="CoolAidData">Cool Aid</option>
+                                        <option value="IndividualDevelopmentFundData">Individual Development Fund</option>
+                                        <option value="ComodityFoodsUSDAData">Commodity Foods - USDA</option>
+                                        <option value="SeniorServicesData">Senior Services</option>
+                                    </select>
+                                </h2>
+                            
+                                <div style="height: 400px">
+                                    <canvas id="serviceCategoriesChart" width="400" height="400"></canvas>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-5">
+                            <div class="card card-body h-100">
+                                <h2 class="mb-4 d-flex align-items-center">
+                                    Top Poverty Conditions
+
+                                    <select class="w-auto form-control ml-auto">
+                                        <option value="">All categories</option>
+                                        <option>Employment</option>
+                                        <option>Health</option>
+                                        <option>Environment</option>
+                                    </select>
+                                </h2>
+
+                                <table class="mb-0 mt-2 table table-striped">
+                                    <tr>
+                                        <td>Job Lay-off</td>
+                                        <td class="fit">13</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loss of Job (extended)</td>
+                                        <td class="fit">10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Accident/Injury</td>
+                                        <td class="fit">9</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Natural Disaster</td>
+                                        <td class="fit">9</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Illness in family</td>
+                                        <td class="fit">5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Natural Disaster</td>
+                                        <td class="fit">2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Illness in family</td>
+                                        <td class="fit">1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Illness in family</td>
+                                        <td class="fit">1</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="py-5 tab-pane" id="householdsTab" role="tabpanel" aria-labelledby="householdsTab-tab">
+                    
+                    <div class="row justify-content-between">
+                        <div class="col-md-7 pr-4">
+
+                            <div class="card card-body h-100">
+                                <h2 class="mb-4 d-flex align-items-center">
+                                    Households
+
+                                    <select class="w-auto form-control ml-auto">
+                                        <option value="">By family type</option>
+                                        <option>By poverty levels</option>
+                                        <option>Members by race</option>
+                                        <option>Members by age</option>
+                                    </select>
+                                </h2>
+                            
+                                <div style="height: 400px">
+                                    <canvas id="householdsChart" width="400" height="400"></canvas>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-5">
+                            <div class="card card-body h-100">
+                                <h2 class="mb-4 d-flex align-items-center">
+                                    Top Poverty Conditions
+
+                                    <select class="w-auto form-control ml-auto">
+                                        <option value="">All categories</option>
+                                        <option>Employment</option>
+                                        <option>Health</option>
+                                        <option>Environment</option>
+                                    </select>
+                                </h2>
+
+                                <table class="mt-2 table table-striped">
+                                    <tr>
+                                        <td>Job Lay-off</td>
+                                        <td class="fit">13</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loss of Job (extended)</td>
+                                        <td class="fit">10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Accident/Injury</td>
+                                        <td class="fit">9</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Natural Disaster</td>
+                                        <td class="fit">9</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Illness in family</td>
+                                        <td class="fit">5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Natural Disaster</td>
+                                        <td class="fit">2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Illness in family</td>
+                                        <td class="fit">1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Illness in family</td>
+                                        <td class="fit">1</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="py-5 tab-pane" id="liheap" role="tabpanel" aria-labelledby="liheap-tab">
+
+                    <div class="row justify-content-between">
+                        <div class="col-md-7 pr-4">
+
+                            <div class="card card-body h-100">
+                                <h2 class="mb-4 d-flex align-items-center">
+                                    LIHEAP Applications
+                                </h2>
+                            
+                                <div style="height: 400px">
+                                    <canvas id="liheapChart" width="400" height="400"></canvas>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-5">
+                            <div class="card card-body h-100">
+                                <h2 class="mb-4 d-flex align-items-center">
+                                    Top Poverty Conditions
+
+                                    <select class="w-auto form-control ml-auto">
+                                        <option value="">All categories</option>
+                                        <option>Employment</option>
+                                        <option>Health</option>
+                                        <option>Environment</option>
+                                    </select>
+                                </h2>
+
+                                <table class="mt-2 table table-striped">
+                                    <tr>
+                                        <td>Job Lay-off</td>
+                                        <td class="fit">13</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loss of Job (extended)</td>
+                                        <td class="fit">10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Accident/Injury</td>
+                                        <td class="fit">9</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Natural Disaster</td>
+                                        <td class="fit">9</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Illness in family</td>
+                                        <td class="fit">5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Natural Disaster</td>
+                                        <td class="fit">2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Illness in family</td>
+                                        <td class="fit">1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Illness in family</td>
+                                        <td class="fit">1</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script>
+        /* Services Data */
+        var AllServicesData = {
+            labels: [
+                    'Family Services', 
+                    'GEDs Are Us', 
+                    'American Red Cross', 
+                    'County Services', 
+                    'Cool Aid', 
+                    'Individual Development Account', 
+                    'Commodity Foods - USDA',
+                    'Senior Services'
+                    ],
+            datasets: [{
+                data: [
+                    1007, 
+                    88, 
+                    78, 
+                    68, 
+                    53, 
+                    41,
+                    40,
+                    37
+                    ],
+                backgroundColor: [
+                    'rgba(30, 78, 153, 0.2)',
+                    'rgba(30, 78, 153, 0.2)',
+                    'rgba(30, 78, 153, 0.2)',
+                    'rgba(30, 78, 153, 0.2)',
+                    'rgba(30, 78, 153, 0.2)',
+                    'rgba(30, 78, 153, 0.2)',
+                    'rgba(30, 78, 153, 0.2)',
+                    'rgba(30, 78, 153, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(30, 78, 153, 0.4)',
+                    'rgba(30, 78, 153, 0.4)',
+                    'rgba(30, 78, 153, 0.4)',
+                    'rgba(30, 78, 153, 0.4)',
+                    'rgba(30, 78, 153, 0.4)',
+                    'rgba(30, 78, 153, 0.4)',
+                    'rgba(30, 78, 153, 0.4)',
+                    'rgba(30, 78, 153, 0.4)',
+                ],
+                borderWidth: 1,
+            }]
+        }
+
+        var GEDsAreUsData = {
+            labels: [
+                    'Subservice One',
+                    'Subservice Two',
+                    'Subservice Three',
+                    'Subservice Four',
+                    'Subservice Five',
+                    'Subservice Six',
+                    'Subservice Seven',
+                    'Subservice Eight',
+                    ],
+            datasets: [{
+                data: [
+                    1007, 
+                    88, 
+                    78, 
+                    68, 
+                    53, 
+                    41,
+                    40,
+                    37
+                    ],
+                backgroundColor: [
+                    'rgba(30, 78, 153, 0.2)',
+                    'rgba(30, 78, 153, 0.2)',
+                    'rgba(30, 78, 153, 0.2)',
+                    'rgba(30, 78, 153, 0.2)',
+                    'rgba(30, 78, 153, 0.2)',
+                    'rgba(30, 78, 153, 0.2)',
+                    'rgba(30, 78, 153, 0.2)',
+                    'rgba(30, 78, 153, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(30, 78, 153, 0.4)',
+                    'rgba(30, 78, 153, 0.4)',
+                    'rgba(30, 78, 153, 0.4)',
+                    'rgba(30, 78, 153, 0.4)',
+                    'rgba(30, 78, 153, 0.4)',
+                    'rgba(30, 78, 153, 0.4)',
+                    'rgba(30, 78, 153, 0.4)',
+                    'rgba(30, 78, 153, 0.4)',
+                ],
+                borderWidth: 1,
+            }]
+        }
+
+        var ctx = document.getElementById('serviceCategoriesChart').getContext('2d');
+        var serviceCategoriesChart = new Chart(ctx, {
+            type: 'horizontalBar',
+            data: AllServicesData,
+            options: {
+                legend: {
+                    display: false
+                },
+                responsive: true,
+                maintainAspectRatio: false,
+            }
+        });
+            
+        /* Households Chart Data */
+        var householdsFamilyTypeChartData = {
+            labels: [
+                    'Single', 
+                    'Female single parent', 
+                    'Male single parent', 
+                    'Multigenerational', 
+                    'Two adults, no children', 
+                    'Two adults, children', 
+                    'Other',
+                    'Unknown'
+                    ],
+            datasets: [{
+                data: [
+                    1007, 
+                    88, 
+                    78, 
+                    68, 
+                    53, 
+                    41,
+                    40,
+                    37
+                    ],
+                backgroundColor: [
+                    'rgba(30, 78, 153, 0.2)',
+                    'rgba(30, 78, 153, 0.2)',
+                    'rgba(30, 78, 153, 0.2)',
+                    'rgba(30, 78, 153, 0.2)',
+                    'rgba(30, 78, 153, 0.2)',
+                    'rgba(30, 78, 153, 0.2)',
+                    'rgba(30, 78, 153, 0.2)',
+                    'rgba(30, 78, 153, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(30, 78, 153, 0.4)',
+                    'rgba(30, 78, 153, 0.4)',
+                    'rgba(30, 78, 153, 0.4)',
+                    'rgba(30, 78, 153, 0.4)',
+                    'rgba(30, 78, 153, 0.4)',
+                    'rgba(30, 78, 153, 0.4)',
+                    'rgba(30, 78, 153, 0.4)',
+                    'rgba(30, 78, 153, 0.4)',
+                ],
+                borderWidth: 1,
+            }]
+        }
+
+        var ctx = document.getElementById('householdsChart').getContext('2d');
+        var householdsChart = new Chart(ctx, {
+            type: 'horizontalBar',
+            data: householdsFamilyTypeChartData,
+            options: {
+                legend: {
+                    display: false
+                },
+                responsive: true,
+                maintainAspectRatio: false,
+            }
+        });
+        
+        /* LIHEAP Chart Data */
+        var liheapChartData = {
+            labels: [
+                    'New', 
+                    'Pending', 
+                    'Approved', 
+                    ],
+            datasets: [{
+                data: [
+                    100, 
+                    50, 
+                    50, 
+                    ],
+                backgroundColor: [
+                    'rgba(30, 78, 153, 0.2)',
+                    'rgba(30, 78, 153, 0.2)',
+                    'rgba(30, 78, 153, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(30, 78, 153, 0.4)',
+                    'rgba(30, 78, 153, 0.4)',
+                    'rgba(30, 78, 153, 0.4)',
+                ],
+                borderWidth: 1,
+            }]
+        }
+
+        var ctx = document.getElementById('liheapChart').getContext('2d');
+        var liheapChart = new Chart(ctx, {
+            type: 'horizontalBar',
+            data: liheapChartData,
+            options: {
+                legend: {
+                    display: false,
+                },
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    yAxes: [{
+                        id: 'y-axis-0',
+                        gridLines: {
+                            display: true,
+                            lineWidth: 1,
+                            color: "rgba(0,0,0,0.30)"
+                        },
+                        ticks: {
+                            beginAtZero:true,
+                            mirror:false,
+                            suggestedMin: 0,
+                            suggestedMax: 500,
+                        },
+                        afterBuildTicks: function(chart) {
+
+                        }
+                    }],
+                    xAxes: [{
+                        id: 'x-axis-0',
+                        gridLines: {
+                            display: false
+                        },
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            },
+        });
+
+        /* Change Chart Data on Select Change */
+        $('.js-changeData').on('change', function() {
+            let chart = window[$(this).data('chart')];
+
+            chart.data.length = 0;
+            chart.data = window[this.value];
+            chart.update();
+        });
+    </script>
+  </body>
+</html>

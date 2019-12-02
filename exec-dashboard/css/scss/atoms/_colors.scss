@@ -1,0 +1,33 @@
+$colors: (
+  'blue': #1E4E99,
+  'lightblue': saturate(lighten(#1E4E99, 61%), 30%),
+  'red': #CC0000,
+  'yellow': #E3910D,
+  'white': #ffffff,
+  'gray-1': #F8F8F8,
+  'gray-2': #CCCCCC,
+  'gray-3': #B4B4B4,
+  'gray-4': #888888,
+  'black': #1A3052
+);
+
+@each $key, $value in $colors {
+  .bg-#{$key}{
+    background: $value;
+  }
+}
+
+@each $key, $value in $colors {
+  .color-#{$key}{
+    color: $value !important;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    a{
+      color: $value !important;
+    }
+  }
+}

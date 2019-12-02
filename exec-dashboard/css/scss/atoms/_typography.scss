@@ -1,0 +1,51 @@
+html,
+body{
+  font: 500 16px/150% Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: map-get($colors, 'blue');
+}
+
+h2{
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: map-get($colors, 'blue');
+}
+
+h3{
+  margin: 0 0 2rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: map-get($colors, 'blue');
+}
+
+h4{
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+hr{
+  margin: 2rem 0;
+}
+
+a{
+  color: map-get($colors, 'blue');
+  cursor: pointer;
+
+  &.add-row,
+  &.view-document{
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: map-get($colors, 'gray-4');
+  }
+}
